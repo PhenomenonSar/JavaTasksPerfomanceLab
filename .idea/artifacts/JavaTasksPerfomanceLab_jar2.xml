@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="JavaTasksPerfomanceLab:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaTasksPerfomanceLab_jar2</output-path>
+    <root id="archive" name="JavaTasksPerfomanceLab.jar">
+      <element id="module-output" name="JavaTasksPerfomanceLab" />
+    </root>
+  </artifact>
+</component>
