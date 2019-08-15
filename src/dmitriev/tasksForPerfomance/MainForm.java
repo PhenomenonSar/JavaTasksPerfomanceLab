@@ -17,11 +17,11 @@ public class MainForm {
     private JButton calcButton;
     private JLabel resultLabel;
     private JTextArea pointArea;
-    FirstTask element1;
-    SecondTask element2;
-    ThirdTask element3;
-    FourthTask element4;
-    int numberOfTask = 0;
+    private FirstTask element1;
+    private SecondTask element2;
+    private ThirdTask element3;
+    private FourthTask element4;
+    private int numberOfTask = 0;
 
     public void setDataToComboBox() {
         listTasks.addItem("Выберите задание из списка...");
@@ -31,7 +31,7 @@ public class MainForm {
         listTasks.addItem("Задание 4 - Про банк");
     }
 
-    public MainForm() {
+    private MainForm() {
         JFrame frame = new JFrame("Задания Java");
         frame.setBounds(100, 100, 400, 200);
         setDataToComboBox();
@@ -48,16 +48,20 @@ public class MainForm {
                         element1 = new FirstTask();
                         element1.parseFileFor1stTask();
                         selectedFile.setText("Выбран файл: " + element1.openedFilePath);
+                        break;
                     case 2:
                         element2 = new SecondTask();
                         element2.parseFileFor2ndTask();
                         selectedFile.setText("Выбран файл: " + element2.openedFilePath);
+                        break;
                     case 3:
                         element3 = new ThirdTask();
                         element3.parseFileFor3rdTask();
                         selectedFile.setText("Выбрана папка: " + element3.openedFilePath);
+                        break;
                     case 4:
                         buttonDownloadFile.setEnabled(true);
+                        break;
                 }
 
             }
@@ -79,10 +83,8 @@ public class MainForm {
                     calcButton.setEnabled(false);
                     pointArea.setVisible(false);
                 }
-
             }
         });
-
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setSize(700, 500);
